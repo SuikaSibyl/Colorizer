@@ -1,0 +1,3 @@
+colorization_by_reference.py 中为参考方法的类 主要代码
+
+reference_tkinter_ui.py 中为针对于参考方法的制作的tkinter UI界面，可单独运行，由于后续被整合进入QT的UI中，故此暂时搁置。
