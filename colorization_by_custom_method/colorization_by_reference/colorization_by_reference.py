@@ -38,6 +38,12 @@ class ColorizationByReference:
         # 依据样本上色
         result_lab = colorization(self.source_image_array_lab, self.target_image_array_lab, samples)
         result_bgr = cv2.cvtColor(result_lab, cv2.COLOR_LAB2BGR)
+        # cv2.imshow("self.source_image_array_lab", self.source_image_array_lab[:, :, 0])
+        # cv2.waitKey(0)
+        # cv2.imshow("self.target_image_array_lab",self.target_image_array_lab[:, :, 0])
+        # cv2.waitKey(0)
+        # cv2.imshow("remapping_image_array_lab",remapping_image_array_lab[:,:,0])
+        # cv2.waitKey(0)
         return result_bgr
 
     def area_interactive_colorization(self, interactive_area_info, debug_mode=False):
@@ -82,7 +88,7 @@ class ColorizationByReference:
         if debug_mode:
             result_rgb = cv2.cvtColor(result_image_array_lab, cv2.COLOR_LAB2BGR)
             cv2.imshow("part_colorization", result_rgb)
-
+            cv2.waitKey(0)
         # 2、扩展到其他区域
         for each_row in result_image_array_lab:
             for each_pixel in each_row:

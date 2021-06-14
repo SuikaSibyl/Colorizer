@@ -144,7 +144,7 @@ def real_global_color():
 def real_area_color():
     global source, target, canvas, area_result_photo, area_result_image, select_box_info_list
     c1 = ColorizationByReference(source, target)
-    result = c1.area_interactive_colorization(select_box_info_list)
+    result = c1.area_interactive_colorization(select_box_info_list,debug_mode=True)
     area_result_image = Image.fromarray(cv2.cvtColor(result, cv2.COLOR_BGR2RGB))
     # result_image.show()
     area_result_photo = ImageTk.PhotoImage(area_result_image)
